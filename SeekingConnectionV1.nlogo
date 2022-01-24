@@ -1,63 +1,11 @@
 ;;========================================
-;; TO DO
-;;========================================
-;; Ecology
-;; - Check death rates - find reasonable proportion between core, edge, and matrix rates []
-;; - Check predatory behaviour - find out about hunting strategies []
-;; - Check predator-avoidance behaviours - find out about avoidance strategies []
-;; - Check foraging behaviours - find out about foraging strategies []
-;; - Check dispersal behaviours - refine dispersal to be more ecologically accurate []
-;;
-;; Landscape
-;; - Get wells working [/]
-;; - Finish creating connectivity features []
-;;    - Corridor Wide [/]
-;;    - Corridor Narrow [/]
-;;    - Stepping Stone Large [/]
-;;    - Stepping Stones Small [/]
-;;    - Matrix Enhancement []
-;; - Make impermeable boundaries around edges []
-;;
-;; Prey
-;; - Get early movement sorted [/]
-;; - Develop movement to account for prey density []
-;; - Get drinking working [/]
-;; - Develop movement for drinking [/]
-;; - Fix reproduction [/]
-;; - Take habitat generality into account in decision making [/]
-;; - Function for prey fear of predators []
-;; - Prey density dependence []
-;; - Fix xy spawning []
-;;
-;; Predators
-;; - Copy and repurpose prey code for predators [/]
-;; - Add hunting mechanic [/]
-;; - Refine hunting []
-;; - Predators density dependence []
-;;
-;; Observer
-;; - Get line graphs working for each patch []
-;; - Get stat reporters working []
-;;   - Total number of island changes and average change frequency []
-;;     1) Turtles have boolean attributes named change-a and change-b (both FALSE by default), and observer has change-frequency-ticker
-;;        (0 by default). Turtles born outside the islands have both attributes set to FALSE. The observer also has a change-rate attribute,
-;;        where the number of changes is also recorded and divided by the number of ticks since the last change.
-;;     2) Presence on one island makes the corresponding change attribute TRUE
-;;     3) When turtles travel to another island, and the opposite change attribute is TRUE, then it is made false and the ticker is +1,
-;;        and the other change attribute is made TRUE
-;;   - Average frequency of island change []
-;;   - Average mortality rate []
-;;     - Observer has mortality-rate attribute (0 by default), where
-;;   - Average population change rate []
-;; - Get heatmap working []
-;;   - Ask patches to +1 when a turtle is present each tick, then upon the model stopping show the raster grid with a heatmap pallette.
-
-
-
-;;========================================
 ;; SEEKING CONNECTION
 ;;========================================
-
+;; Author: Benjamin Lucas
+;; Description: This ABM was developed as a proof-of-concept to predict how connection of a fragmented landscape may impact the dispersal 
+;; and populations of a number of hypothetical predator and prey species representing different reproductive, dispersal, and habitat sensitivity traits. 
+;; To achieve this, the ABM aimed to generate a healthy environment where populations of both predators and prey could thrive and survive sustainably, 
+;; upon which questions surrounding the impact of connectivity on real or imagined environments could be answered.
 
 ;;===================================
 ;; SETUPS
